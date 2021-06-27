@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="a" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="Apagar" xml:space="preserve">
+    <value>Apagar</value>
+  </data>
+  <data name="Apagarestaunicapartida" xml:space="preserve">
+    <value>Apagar esta única partida?</value>
+  </data>
+  <data name="apagartudo.Text" xml:space="preserve">
+    <value>Apagar tudo</value>
+  </data>
+  <data name="Aplicativocriadopor" xml:space="preserve">
+    <value>Aplicativo criado por</value>
+  </data>
+  <data name="Batida.Content" xml:space="preserve">
+    <value>Batida</value>
+  </data>
+  <data name="Batidadecamburao.Content" xml:space="preserve">
+    <value>Batida de camburão</value>
+  </data>
+  <data name="Batidalascada.Content" xml:space="preserve">
+    <value>Batida lascada</value>
+  </data>
+  <data name="com" xml:space="preserve">
+    <value>com</value>
+  </data>
+  <data name="contatar.Text" xml:space="preserve">
+    <value>Conversar com Igor sobre o app</value>
+  </data>
+  <data name="Continuarpartida" xml:space="preserve">
+    <value>Continuar partida</value>
+  </data>
+  <data name="d1.Text" xml:space="preserve">
+    <value>Este aplicativo foi criado para ser usado como um placar eletrônico de uma partida de dominó. O app também salva todos os dados das partidas e você pode retorna-las a hora que quiser.</value>
+  </data>
+  <data name="d2.Text" xml:space="preserve">
+    <value>Cada botão tem uma ação diferente e retorna uma ação, vamos aprender pra que serve cada um deles.
+
+Passe: O botão de passe é usando quanto um jogador não possui uma pedra para ser usada na rodada e então o jogador seguinte jogara a pedra se tiver o botão de passe vale 2 pontos no placar.
+
+Passe de 2: É usado quanto o passe é de dois jogadores e vale 4 pontos no placar.
+
+Geral: O geral é usando quantos todos os jogadores passa e você joga duas pedras consecutivas e vale 6 pontos no placar se você gritar geral se não gritar se torna um geral inconsciente.
+
+Geral inconsciente: O feral inconsciente vale o mesmo do geral só que é usando quanto o jogador faz um geral sem saber e todos passam, se isso acontecer os 6 pontos vão para o time adversário.
+
+Passe de saída: O passe de saída é quanto você passa o jogador de primeira e vela 4 pontos no placar.
+
+Passe de 2 em saída: Quanto você passa dois jogadores de primeira e ganha 6 pontos.
+
+Batida: Ocorre quanto a partida acaba e você ganha 4 pontos.
+
+Batida lascada: A batida lascada ocorre quanto você bate o jogo e sua pedra  pode bate dos dois lados e vale 8 pontos.
+
+Batida de camburão: Ocorre quanto você bate o jogo de camburão e vale 20 pontos.
+
+Partida dobrada: Quanto a partida termina e nenhum dos jogadores conseguem finalizar a partida, a partida é reiniciada, você deve marcar a opção partida dobrada isso significa que todos os passes, geral e batidas valeram tudo dobrada. Exemplo um passe vale 2 já agora ira valer 4 pontos.
+  
+Máximo de 20 pontos: Você pode marcar essa opção se tiver muitos times  a cada 20 pontos ocorrera uma nova partida o time perdedor sai e entra outro o primeiro que fizer 20 pontos ganha.</value>
+  </data>
+  <data name="d3.Text" xml:space="preserve">
+    <value>O jogo funciona assim 4 jogadores começam 2 jogares serão o time A e os outros o B,
+em uma mesa o jogador A senta perto do B e A e B o jogar A fica em frente o seu companheiro e o  B também. O jogo se inicia com o jogador que tiver o camburão de sena (6), o proposito do jogo é dar passe, geral e bater o jogo para ganhar a partida, depois da primeira partida o jogador iniciante sera oque esta perto do jogar que iniciou a primeira partida e pode sair com qualquer pedra se tiver camburão pode iniciar com ele ou escolhe outra ate bater os 20 pontos ou se a partida for única ate quantos pontos quiserem.</value>
+  </data>
+  <data name="Desejaretornarestapartida" xml:space="preserve">
+    <value>Deseja retornar esta partida?</value>
+  </data>
+  <data name="e" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="edobrada" xml:space="preserve">
+    <value>e dobrada</value>
+  </data>
+  <data name="em" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="empatou" xml:space="preserve">
+    <value>empatou</value>
+  </data>
+  <data name="Estapartidafoirealizadanodia" xml:space="preserve">
+    <value>Esta partida foi realizada no dia</value>
+  </data>
+  <data name="Fechar" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="fimdegame" xml:space="preserve">
+    <value>Fim de jogo!</value>
+  </data>
+  <data name="ganharaode" xml:space="preserve">
+    <value>ganharão de</value>
+  </data>
+  <data name="ganhou" xml:space="preserve">
+    <value>ganhou</value>
+  </data>
+  <data name="Geral.Content" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="Geralinconsciente.Content" xml:space="preserve">
+    <value>Geral inconsciente</value>
+  </data>
+  <data name="Iniciarnovapartida" xml:space="preserve">
+    <value>Iniciar nova partida</value>
+  </data>
+  <data name="inicieumanovapartidaoucontinueamesma" xml:space="preserve">
+    <value>inicie uma nova partida ou continue a mesma!</value>
+  </data>
+  <data name="JogadoresA.PlaceholderText" xml:space="preserve">
+    <value>Jogadores A</value>
+  </data>
+  <data name="JogadoresB.PlaceholderText" xml:space="preserve">
+    <value>Jogadores B</value>
+  </data>
+  <data name="listavazia.Text" xml:space="preserve">
+    <value>Lista vazia!</value>
+  </data>
+  <data name="Maximode20pontos.Content" xml:space="preserve">
+    <value>Máximo de 20 pontos</value>
+  </data>
+  <data name="Nadaparaapagarsualistaestavazia" xml:space="preserve">
+    <value>Nada para apagar sua lista esta vazia!</value>
+  </data>
+  <data name="Nao" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="Naoepossiveliniciarcomzerodigiteoutrovalor" xml:space="preserve">
+    <value>Não é possível iniciar com zero, digite outro valor!</value>
+  </data>
+  <data name="Novapartida.Content" xml:space="preserve">
+    <value>Nova partida</value>
+  </data>
+  <data name="partida" xml:space="preserve">
+    <value>partida</value>
+  </data>
+  <data name="Partidade20pontos" xml:space="preserve">
+    <value>Partida de 20 pontos</value>
+  </data>
+  <data name="Partidadobrada.Content" xml:space="preserve">
+    <value>Partida dobrada</value>
+  </data>
+  <data name="Partidanormal" xml:space="preserve">
+    <value>Partida normal</value>
+  </data>
+  <data name="partidas" xml:space="preserve">
+    <value>partidas</value>
+  </data>
+  <data name="partidaslist.Text" xml:space="preserve">
+    <value>Partidas</value>
+  </data>
+  <data name="Passe.Content" xml:space="preserve">
+    <value>Passe</value>
+  </data>
+  <data name="Passede2.Content" xml:space="preserve">
+    <value>Passe de 2</value>
+  </data>
+  <data name="Passede2saida.Content" xml:space="preserve">
+    <value>Passe de 2 saida</value>
+  </data>
+  <data name="Passedesaida.Content" xml:space="preserve">
+    <value>Passe de saida</value>
+  </data>
+  <data name="pd" xml:space="preserve">
+    <value>Pontos de Dominó</value>
+  </data>
+  <data name="pdx" xml:space="preserve">
+    <value>Pontos%20de%20Dominó</value>
+  </data>
+  <data name="ProseguirWhtasapp" xml:space="preserve">
+    <value>Você sera redirecionado ao navegador e depois ao WhatsApp deseja prosseguir?</value>
+  </data>
+  <data name="psalvas.Text" xml:space="preserve">
+    <value>Partidas salvas</value>
+  </data>
+  <data name="Retornarpartida" xml:space="preserve">
+    <value>Retornar partida</value>
+  </data>
+  <data name="salvarp.Text" xml:space="preserve">
+    <value>Salvar partida</value>
+  </data>
+  <data name="Sim" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="sobre" xml:space="preserve">
+    <value>Imformações e como usar</value>
+  </data>
+  <data name="Sobreoappemais.Text" xml:space="preserve">
+    <value>Sobre o app e mais</value>
+  </data>
+  <data name="t1.Text" xml:space="preserve">
+    <value>O porque deste aplicativo.</value>
+  </data>
+  <data name="t2.Text" xml:space="preserve">
+    <value>Comandos e botões</value>
+  </data>
+  <data name="t3.Text" xml:space="preserve">
+    <value>Como posso jogar esse jogo e como jogar?</value>
+  </data>
+  <data name="Temcertezequedesejalimpatodaestalista" xml:space="preserve">
+    <value>Tem certeza que deseja limpa toda esta lista?</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Pontos de Dominó</value>
+  </data>
+  <data name="vamosconversar" xml:space="preserve">
+    <value>Vamos%20conversar%20um%20pouco%20sobre%20o</value>
+  </data>
+  <data name="Voceprecisadigitaralgumnumero" xml:space="preserve">
+    <value>Você precisa digitar algum número!</value>
+  </data>
+  <data name="vs" xml:space="preserve">
+    <value>vs</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Pontos de Dominó</value>
+  </data>
+  <data name="Nmostrarnovamente" xml:space="preserve">
+    <value>Não mostrar novamente</value>
+  </data>
+  <data name="Salvar" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="saveinautosave" xml:space="preserve">
+    <value>Sua partida será salva e poderá ser retornada a hora que você desejar, deseja salvar esta partida?</value>
+  </data>
+</root>

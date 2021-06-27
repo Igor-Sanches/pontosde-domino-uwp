@@ -1,0 +1,307 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pontos_de_Domino_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10FallCreatorsUpdate="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    x:Class="Pontos_de_Domino_UWP.MainPage"
+    RequestedTheme="Dark"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="PopupStyle1" TargetType="Popup"/>
+    </Page.Resources>
+
+    <!--App Pontos de dominó programado em C# por Igor De Jesus Dutra Sanches em Picada/Anajatuba - MA // Projeto iniciado no dia 20/01/2019 para uso próprio em partidas de dominó como um placar eletrónico-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="Painel"  Background="#FF0E0101" Height="48">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions> 
+            <TextBlock x:Uid="Title"
+                       Grid.Column="1"
+                       HorizontalAlignment="Left"
+                                 TextWrapping="Wrap"
+                                 VerticalAlignment="Center"
+                       Margin="20,0"
+                       FontSize="22"
+                       Text="Pontos de Dominó"/>
+            <Button Background="Transparent"        
+                x:Name="TopBarBtnMenu" 
+                            Grid.Column="2"
+                            Width="45" 
+                        Style="{StaticResource ButtonStyle}"
+                    Foreground="WhiteSmoke"
+                            Content="&#xE0C3;"
+                    RequestedTheme="Dark"
+                            FontFamily="Segoe UI Symbol"
+                            FontSize="15" >
+                <Button.Flyout>
+                    <MenuFlyout Placement="Left">
+                        <MenuFlyoutItem Click="MenuFlyoutItem_Click" x:Name="SaveP"  Tag="a1" x:Uid="salvarp"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Click="MenuFlyoutItem_Click" Tag="a2" x:Uid="psalvas"/> 
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Click="MenuFlyoutItem_Click" Tag="a4" x:Uid="Sobreoappemais"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem Click="MenuFlyoutItem_Click" Tag="a5" Text="Igor Sanches"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1"  Background="#FF190909">
+            <ScrollViewer VerticalScrollBarVisibility="Disabled">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Margin="0,0,0,5"  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" x:Name="PontosA" FontWeight="Bold"  FontSize="30" Text="0"/>
+                                <StackPanel Margin="0,0,5,0" HorizontalAlignment="Right" Orientation="Horizontal">
+                                    <TextBox Tag="A" KeyUp="Edit_KeyUp" Height="37" Visibility="Collapsed" MaxWidth="100" x:Name="EditA" Text="0" MinWidth="70" VerticalAlignment="Center"/>
+                                    <Button Tag="edit"  Height="37" Style="{StaticResource ButtonStyle1}" x:Name="SaveAndEditA" Click="SaveAndEditA_Click" VerticalAlignment="Center">
+                                        <SymbolIcon x:Name="SymbolEditOutSaveA" Symbol="Edit"/>
+                                    </Button>
+                                    <Button Tag="save"  Height="37" Visibility="Collapsed" Style="{StaticResource ButtonStyle2}" x:Name="SaveAndEdit_A" Click="SaveAndEditA_Click" VerticalAlignment="Center">
+                                        <SymbolIcon Symbol="Save"/>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                            <TextBox Tag="JA" KeyUp="Edit_KeyUp" x:Name="JogdoresA"  Style="{StaticResource TextBoxStyle1}" TextAlignment="Center" HorizontalAlignment="Center" BorderThickness="0,0,0,2" MaxLength="20" x:Uid="JogadoresA"/>
+                        </StackPanel>
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Margin="0,2"  HorizontalAlignment="Stretch" VerticalAlignment="Center"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource ButtonStyle3}" HorizontalAlignment="Stretch" x:Name="ClickButtonsA"  Click="ClickButtonsA_Click" Tag="Passe"  x:Uid="Passe" Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle4}" HorizontalAlignment="Stretch" Grid.Column="1" Click="ClickButtonsA_Click" Tag="Passede2" x:Uid="Passede2" Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle5}" HorizontalAlignment="Stretch" Grid.Column="2" Click="ClickButtonsA_Click" Tag="Passedesaida" x:Uid="Passedesaida" Margin="2,0"/>
+                            </Grid>
+                            <Grid Grid.Row="1"  Margin="0,2" HorizontalAlignment="Stretch" VerticalAlignment="Center"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource ButtonStyle3}" HorizontalAlignment="Stretch" Click="ClickButtonsA_Click" Tag="Passede2saida" x:Uid="Passede2saida" Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle4}" Grid.Column="1" HorizontalAlignment="Stretch" Click="ClickButtonsA_Click" Tag="Geral" x:Uid="Geral" Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle5}" Grid.Column="2" HorizontalAlignment="Stretch" Click="ClickButtonsA_Click" Tag="Batida" x:Uid="Batida" Margin="2,0"/>
+                            </Grid>
+                            <Grid Grid.Row="2" Margin="0,2" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource ButtonStyle3}" HorizontalAlignment="Stretch" Click="ClickButtonsA_Click" Tag="Geralinconsciente" x:Uid="Geralinconsciente" Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle5}" Grid.Column="1" HorizontalAlignment="Stretch" Click="ClickButtonsA_Click" Tag="Batidalascada"  x:Uid="Batidalascada" Margin="2,0"/>
+                            </Grid>
+                            <Grid Grid.Row="3" Margin="0,2" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                                <Button Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Stretch" Click="ClickButtonsA_Click" x:Uid="Batidadecamburao" Tag="Batidadecamburão"  Margin="2,0"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <MenuFlyoutSeparator Grid.Row="0"/>
+                        <Grid Grid.Row="1" Margin="0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox FontSize="13" MaxWidth="30" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="_2X"  x:Uid="Partidadobrada" Grid.Column="0"/>
+                            <CheckBox FontSize="13"  MaxWidth="30" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="_20M" x:Uid="Maximode20pontos" Grid.Column="1"/>
+                        </Grid>
+                        <Grid Grid.Row="2" Margin="0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="caraA" Text=":|" Grid.Column="0"/>
+                            <Button Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Zera" Click="Zera_Click" x:Uid="Novapartida" Grid.Column="1"/>
+                            <TextBlock FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="caraB"  Text=":|" Grid.Column="2"/>
+                        </Grid>
+                        <MenuFlyoutSeparator Grid.Row="3"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Margin="0,0,0,5"  Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" x:Name="PontosB" FontWeight="Bold"  FontSize="30" Text="0"/>
+                                <StackPanel Margin="0,0,5,0" HorizontalAlignment="Right" Orientation="Horizontal">
+                                    <TextBox Tag="B" KeyUp="Edit_KeyUp" Height="37" Visibility="Collapsed" MaxWidth="100" x:Name="EditB" Text="0" MinWidth="70" VerticalAlignment="Center"/>
+                                    <Button Tag="edit" Height="37" Style="{StaticResource ButtonStyle1}" x:Name="SaveAndEditB" Click="SaveAndEditB_Click"  VerticalAlignment="Center">
+                                        <SymbolIcon x:Name="SymbolEditOutSaveB" Symbol="Edit"/>
+                                    </Button>
+                                    <Button Visibility="Collapsed" Tag="save"  Height="37" Style="{StaticResource ButtonStyle2}" x:Name="SaveAndEdit_B" Click="SaveAndEditB_Click"  VerticalAlignment="Center">
+                                        <SymbolIcon  Symbol="Save"/>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                            <TextBox Tag="jB" KeyUp="Edit_KeyUp" x:Name="JogdoresB"  Style="{StaticResource TextBoxStyle1}" TextAlignment="Center" HorizontalAlignment="Center" BorderThickness="0,0,0,2" MaxLength="20" x:Uid="JogadoresB"/>
+                        </StackPanel>
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Margin="0,2"  HorizontalAlignment="Stretch" VerticalAlignment="Center"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="aUTO"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource ButtonStyle3}" HorizontalAlignment="Stretch" x:Name="ClickButtonsB"  Click="ClickButtonsB_Click"  x:Uid="Passe" Tag="Passe"  Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle4}" HorizontalAlignment="Center" Grid.Column="1" Click="ClickButtonsB_Click" x:Uid="Passede2" Tag="Passede2"  Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle5}" HorizontalAlignment="Stretch" Grid.Column="2" Click="ClickButtonsB_Click" x:Uid="Passedesaida" Tag="Passedesaida"  Margin="2,0"/>
+                            </Grid>
+                            <Grid Grid.Row="1"  Margin="0,2" HorizontalAlignment="Stretch" VerticalAlignment="Center"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="aUTO"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource ButtonStyle3}" HorizontalAlignment="Stretch" Click="ClickButtonsB_Click" x:Uid="Passede2saida" Tag="Passede2saida"  Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle4}" Grid.Column="1" HorizontalAlignment="Center" Click="ClickButtonsB_Click" Tag="Geral" x:Uid="Geral" Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle5}" Grid.Column="2" HorizontalAlignment="Stretch" Click="ClickButtonsB_Click" Tag="Batida" x:Uid="Batida" Margin="2,0"/>
+                            </Grid>
+                            <Grid Grid.Row="2" Margin="0,2" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource ButtonStyle3}" HorizontalAlignment="Stretch" Click="ClickButtonsB_Click" x:Uid="Geralinconsciente" Tag="Geralinconsciente"  Margin="2,0"/>
+                                <Button Style="{StaticResource ButtonStyle5}" Grid.Column="1" HorizontalAlignment="Stretch" Click="ClickButtonsB_Click" x:Uid="Batidalascada" Tag="Batidalascada"  Margin="2,0"/>
+                            </Grid>
+                            <Grid Grid.Row="3" Margin="0,2" HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                                <Button Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Stretch" Click="ClickButtonsB_Click" x:Uid="Batidadecamburao" Tag="Batidadecamburão"  Margin="2,0"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+        <SplitView PaneBackground="#FF0E0101" x:Name="paneH" OpenPaneLength="330" DisplayMode="Overlay" Grid.Row="1">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="Delete" Click="Delete_Click"  Grid.Row="2" Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Stretch" Margin="5,20" >
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Delete"/>
+                            <TextBlock x:Uid="apagartudo" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <TextBlock x:Uid="listavazia" Visibility="Collapsed"  HorizontalAlignment="Center" x:Name="ListaVazia" Margin="30"/>
+                    <ScrollViewer xmlns:c="using:Pontos_de_Domino_UWP.db.Banco_De_Dados.Classes" x:Name="lista10" Visibility="Collapsed" VerticalScrollBarVisibility="Hidden"  Grid.Row="1">
+                        <ItemsControl x:Name="list">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="c:Salvos">
+                                    <StackPanel  BorderBrush="Gray" BorderThickness="0,0,0,1" Orientation="Horizontal">
+                                        <Image VerticalAlignment="Center" Source="Assets/icon.png" Height="48" Width="48" Margin="5"/>
+                                        <StackPanel Margin="0,5"  VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Text1}"/>
+                                            <TextBlock Text="{Binding Text2}" Opacity="0.8" FontSize="12"/>
+                                            <TextBlock Text="{Binding Text3}" Opacity="0.8" FontSize="10"/>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Style="{StaticResource ButtonStyle3}" Content="Restaurar partida" x:Name="Restaurar" Click="Restaurar_Click"/>
+                                                <Button Style="{StaticResource ButtonStyle5}" Margin="2,0" x:Name="Info" Click="Info_Click">
+                                                    <SymbolIcon Symbol="Help"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                 </Grid>
+            </SplitView.Pane>
+        </SplitView>
+        <SplitView PanePlacement="Right" PaneBackground="#FF0E0101" x:Name="paneI" OpenPaneLength="330" DisplayMode="Overlay" Grid.Row="1">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <RelativePanel HorizontalAlignment="Center" BorderBrush="Gray" BorderThickness="0,0,0,2">
+                        <TextBlock x:Uid="sobre" FontWeight="Bold" FontSize="17"/>
+                    </RelativePanel>
+                    <Grid Grid.Row="1">
+                        <ScrollViewer Margin="5" VerticalScrollBarVisibility="Hidden" HorizontalContentAlignment="Center">
+                            <StackPanel HorizontalAlignment="Center">
+                                <RichTextBlock >
+                                    <Paragraph Margin="5">
+                                        <Run x:Uid="t1" Foreground="DarkGray" FontWeight="ExtraLight" Text="titulo" FontSize="18" FontStyle="Oblique" FontStretch="ExtraExpanded"/>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run x:Uid="d1" Text="Desc" Foreground="LightGray"  FontWeight="ExtraLight"/>
+                                    </Paragraph>
+                                    <Paragraph Margin="5">
+                                        <Run x:Uid="t2" Foreground="DarkGray" FontWeight="ExtraLight" Text="titulo" FontSize="18" FontStyle="Oblique" FontStretch="ExtraExpanded"/>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run x:Uid="d2" Text="Desc" Foreground="LightGray"  FontWeight="ExtraLight"/>
+                                    </Paragraph>
+                                    <Paragraph Margin="5">
+                                        <Run x:Uid="t3" Foreground="DarkGray" FontWeight="ExtraLight" Text="titulo" FontSize="18" FontStyle="Oblique" FontStretch="ExtraExpanded"/>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Run x:Uid="d3" Text="Desc" Foreground="LightGray"  FontWeight="ExtraLight"/>
+                                    </Paragraph>
+                                </RichTextBlock>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
+                    <Button VerticalContentAlignment="Center" x:Name="Contato" Click="Contato_Click"  Grid.Row="2" Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Stretch" Margin="5,20" >
+                        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                            <Image Width="20" Source="Assets/zap.png"  VerticalAlignment="Center"/>
+                            <TextBlock x:Uid="contatar" Margin="10,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+</Page>
